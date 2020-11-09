@@ -22,7 +22,7 @@ const WindowOpener = (props) => {
   const { children, width, height, className } = props
   const opts = `dependent=${1}, alwaysOnTop=${1}, alwaysRaised=${1}, alwaysRaised=${1}, width=${
     width || 300
-  }, height=${height || 400} left=${left} top=${top}`
+  }, height=${height || 400} left=${props.left || left} top=${props.top || top}`
   browser = window.self
   browser.onSuccess = (res) => {
     props.bridge(null, res)
